@@ -40,14 +40,19 @@ def greet_user(update, bot):
     update.message.reply_text(text)
 
 def astro_user(update, bot):
+    planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
     text = 'Вызван /planet'
     print(text)
-    print('!!!')
     t = update.message.text
-    print('!!!!!')
-    print(update.message.text.split(' '))
-    planet_name = update.message.text.split(' ')[1]
+    planet_name = str(update.message.text.split(' ')[1]).capitalize()
     print(planet_name)
+    if planet_name in planets:
+        planet = getattr(ephem, planet_name)
+        pl = planet('2020')
+        print(ephem.constellation(pl))
+    else:
+        update.message.reply_text('Имя планеты введено неправильно. После "/planet " введите английское имя планеты.')
+        print('Имя планеты введено неправильно. После "/planet " введите английское имя планеты.')
     update.message.reply_text(text)
 
 def talk_to_me(update, bot):
