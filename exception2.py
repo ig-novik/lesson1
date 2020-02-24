@@ -20,7 +20,7 @@ def get_summ(num_one, num_two):
         return int(num_one) + int(num_two)
     except ValueError:
         print('Программа обрабатывает только числа')
-        return None
+        return False
     
 if __name__ == "__main__":
     print(get_summ(1, 2))
