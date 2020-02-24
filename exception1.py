@@ -25,22 +25,21 @@ def ask_user():
     """
     dict1 = {"как дела?": "Хорошо!", "что делаешь?": "Программирую", "как здоровье?": "Отлично!",
              "как погода?": "Лучше не бывает :)", "на выход?": "Как скажешь ;)"}
-    w1 = 1
     quest = 'Задайте вопрос: '
-    while w1:
+    while True:
         try:
             user_answer = set_query(input(quest).lower())
             if user_answer in dict1:
                 print(dict1[user_answer])
                 """Выход по ввводу этой фразы"""
                 if user_answer == "на выход?":
-                    w1 = 0
+                    break
             else:
                 print('Всё нормуль :)')
         except KeyboardInterrupt:
             print('')
             print('Пока!')
-            w1=0
+            break
 
 if __name__ == "__main__":
     ask_user()

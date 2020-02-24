@@ -15,9 +15,10 @@
 
 """
 
+
 def str_an(str1, str2):
     res = 0
-    if  type(str1) == str and type(str2) == str:
+    if type(str1) == str and type(str2) == str:
         if len(str1) == len(str2):
             res = 1
         elif str2 == 'learn':
@@ -29,14 +30,17 @@ def str_an(str1, str2):
 
     return res
 
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     """
-    print (str_an(1, 'gfgfg'))
+    print(str_an(1, 'gfgfg'))
     print(str_an('gfgfg', 'gfgfg'))
     print(str_an('gfgfgkdsk', 'gfgfg'))
     print(str_an('gfgfgkdsk', 'learn'))
     print(str_an('gfg', 'gfgfg'))
+
+
 if __name__ == "__main__":
     main()

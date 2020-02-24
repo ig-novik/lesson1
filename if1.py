@@ -33,14 +33,13 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    w1 = 1
     age = input('Введите Ваш возраст, плз: ')
-    while w1:
+    while True:
         if age.isdigit():
             age = int(age)
             occ = occupation(age)
             print('Вашим основным занятием является - ' + occ)
-            w1 = 0
+            break
         else:
             age = input('Введите Ваш возраст только цифрами: ')
 

@@ -11,13 +11,12 @@
 
 
 def ask_user():
-    w1=1
     quest = 'Как дела? '
-    while w1:
+    while True:
         user_answer = input(quest)
         if user_answer.lower() == 'хорошо':
-            w1=0
-            print('Вот... сразу бы так :)')
+            print('Замечательно! Пока.прор')
+            break
         else:
             quest = 'А что так? Как дела? '
 
